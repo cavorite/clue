@@ -1,8 +1,12 @@
 /target
 my-idx
-.settings/
-.project
+*.iml
+*.swp
+.DS_Store
 .classpath
 .idea/
-*.iml
+.project
+.sdkmanrc
+.settings
+.mvn/wrapper
 dependency-reduced-pom.xml
