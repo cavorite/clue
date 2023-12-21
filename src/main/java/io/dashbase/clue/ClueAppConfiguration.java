@@ -5,12 +5,11 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import io.dashbase.clue.api.*;
 import io.dashbase.clue.commands.CommandRegistrar;
 import io.dashbase.clue.commands.DefaultCommandRegistrar;
-
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class ClueAppConfiguration  {
+public class ClueAppConfiguration {
     public QueryBuilder queryBuilder = new DefaultQueryBuilder();
     public DirectoryBuilder dirBuilder = new DefaultDirectoryBuilder();
     public IndexReaderFactory indexReaderFactory = new DefaultIndexReaderFactory();
