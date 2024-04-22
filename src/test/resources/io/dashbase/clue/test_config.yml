@@ -1,0 +1,8 @@
+---
+queryBuilder: !<default> {}
+dirBuilder: !<default>
+  dir: null
+indexReaderFactory: !<default>
+  indexReader: null
+analyzerFactory: !<CustomizedAnalyzerFactory> {}
+commandRegistrar: !<default> {}

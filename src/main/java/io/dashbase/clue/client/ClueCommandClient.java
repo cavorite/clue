@@ -13,6 +13,8 @@ import java.util.LinkedList;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 import javax.net.ssl.*;
+
+import com.google.common.io.ByteStreams;
 import jline.console.ConsoleReader;
 import jline.console.completer.ArgumentCompleter;
 import jline.console.completer.Completer;
@@ -131,8 +133,7 @@ public class ClueCommandClient {
 
             Response<ResponseBody> response = call.execute();
             try (ResponseBody responseBody = response.body()) {
-                InputStream is = responseBody.byteStream();
-                is.transferTo(System.out);
+                ByteStreams.copy(responseBody.byteStream(), System.out);
             }
         } catch (Exception e) {
             e.printStackTrace(out);

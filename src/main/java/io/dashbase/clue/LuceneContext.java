@@ -71,7 +71,7 @@ public class LuceneContext extends ClueContext {
         return queryBuilder;
     }
 
-    public Analyzer getAnalyzerQuery() {
+    public Analyzer getAnalyzerQuery() throws Exception {
         return analyzerFactory.forQuery();
     }
 

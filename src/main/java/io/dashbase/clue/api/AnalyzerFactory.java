@@ -10,7 +10,6 @@ import org.apache.lucene.analysis.Analyzer;
         defaultImpl = DefaultAnalyzerFactory.class)
 @JsonSubTypes({@JsonSubTypes.Type(name = "default", value = DefaultAnalyzerFactory.class)})
 public interface AnalyzerFactory {
-    Analyzer forQuery();
-
-    Analyzer forIndexing();
+    Analyzer forQuery() throws Exception;
+    Analyzer forIndexing() throws Exception;
 }
